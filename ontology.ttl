@@ -1,0 +1,205 @@
+@prefix : <http://bim.aalto.fi/DiCtion/Ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://bim.aalto.fi/DiCtion/Ontology/> .
+
+<http://bim.aalto.fi/DiCtion/Ontology/> rdf:type owl:Ontology ;
+                                         owl:versionIRI <http://bim.aalto.fi/DiCtion/Ontology/ConstructionMonitoring/0.9.1> ;
+                                         <http://purl.org/dc/terms/creator> "Seppo Torma"@en ,
+                                                                            "Yuan Zheng"@en ;
+                                         rdfs:comment "The construction data monitoring ontology is defined as the module that includes the concepts and relationships that relevant with the data monitoring and gathering process in ther construction project. As designed , the monitoring can be achieved by collecting the relevant construction data of instant event to find the real-time status of a domain object. The module is also a socket to link with other ICT ontologies in order to obtain data from ICT devices."@en ;
+                                         owl:versionInfo "0.9.1" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime
+:hasCreationTime rdf:type owl:ObjectProperty ;
+                 rdfs:domain :InformationEntity ;
+                 rdfs:range <http://www.w3.org/2006/time#Instant> ;
+                 rdfs:comment "Realtion of an InformationEntity and its created time instant"@en .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasObject
+:hasObject rdf:type owl:ObjectProperty ;
+           rdfs:domain :Event ;
+           rdfs:range :DomainObject ;
+           rdfs:comment "A relation of between object-relevant concepts and their related domain object"@en .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasOrigin
+:hasOrigin rdf:type owl:ObjectProperty ;
+           rdfs:domain :InformationEntity ;
+           rdfs:range :InformationProducer ;
+           rdfs:comment "Relation of a InformationEntity and its producer."@en .
+
+
+###  http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                                      rdfs:range <http://www.w3.org/ns/sosa/Result> ;
+                                      rdfs:comment "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property." .
+
+
+###  http://www.w3.org/ns/sosa/isObservedBy
+<http://www.w3.org/ns/sosa/isObservedBy> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <http://www.w3.org/ns/sosa/observes> ;
+                                         rdfs:domain <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                         rdfs:range <http://www.w3.org/ns/sosa/Sensor> ;
+                                         rdfs:comment "Relation between an ObservableProperty and the Sensor able to observe it."@en .
+
+
+###  http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <http://www.w3.org/ns/sosa/madeObservation> ;
+                                         rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                                         rdfs:range <http://www.w3.org/ns/sosa/Sensor> ;
+                                         rdfs:comment "Relation between an Observation and the Sensor which made the Observations."@en .
+
+
+###  http://www.w3.org/ns/sosa/madeObservation
+<http://www.w3.org/ns/sosa/madeObservation> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://www.w3.org/ns/sosa/Sensor> ;
+                                            rdfs:range <http://www.w3.org/ns/sosa/Observation> ;
+                                            rdfs:comment "Relation between a Sensor and an Observation made by the Sensor."@en .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                                             rdfs:range <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                             rdfs:comment "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
+
+
+###  http://www.w3.org/ns/sosa/observes
+<http://www.w3.org/ns/sosa/observes> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://www.w3.org/ns/sosa/Sensor> ;
+                                     rdfs:range <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                     rdfs:comment "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue
+:hasStatusValue rdf:type owl:DatatypeProperty ;
+                rdfs:domain :StatusEvent ;
+                rdfs:comment "A relation between the status evnet and its value."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Actor
+:Actor rdf:type owl:Class ;
+       rdfs:comment "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."@en .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/DomainObject
+:DomainObject rdf:type owl:Class ;
+              rdfs:comment "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."@en .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf :InformationEntity ;
+       rdfs:comment "‘Event’ concept refers to a record of a single occurance based on a time instant."@en .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/InformationEntity
+:InformationEntity rdf:type owl:Class ;
+                   rdfs:subClassOf :DomainObject ;
+                   rdfs:comment "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."@en .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/InformationProducer
+:InformationProducer rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( :Actor
+                                                                <http://www.w3.org/ns/sosa/Sensor>
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf :Actor ,
+                                     <http://www.w3.org/ns/sosa/Sensor> ;
+                     rdfs:comment "The producer of an Information entity. The information producer can be human who create or input the information to the system, or the sensors and other ICT devices that can generate the data and information and input in the system."@en .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/StatusEvent
+:StatusEvent rdf:type owl:Class ;
+             rdfs:subClassOf :Event ;
+             rdfs:comment "An event that indicates the status" .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:comment "A temporal entity with zero extent or duration"@en .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class ;
+                                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.w3.org/ns/sosa/isObservedBy> ;
+                                                                 owl:allValuesFrom <http://www.w3.org/ns/sosa/Sensor>
+                                                               ] ;
+                                               rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class ;
+                                        rdfs:subClassOf :Event ,
+                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                          owl:allValuesFrom <http://www.w3.org/ns/sosa/Result>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/sosa/isObservedBy> ;
+                                                          owl:allValuesFrom <http://www.w3.org/ns/sosa/Sensor>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                          owl:allValuesFrom <http://www.w3.org/ns/sosa/ObservableProperty>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass <http://www.w3.org/ns/sosa/Result>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/sosa/isObservedBy> ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass <http://www.w3.org/ns/sosa/Sensor>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass <http://www.w3.org/ns/sosa/ObservableProperty>
+                                                        ] ;
+                                        rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with." .
+
+
+###  http://www.w3.org/ns/sosa/Result
+<http://www.w3.org/ns/sosa/Result> rdf:type owl:Class ;
+                                   rdfs:comment "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en .
+
+
+###  http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> rdf:type owl:Class ;
+                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/sosa/madeObservation> ;
+                                                     owl:allValuesFrom <http://www.w3.org/ns/sosa/Observation>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/sosa/observes> ;
+                                                     owl:allValuesFrom <http://www.w3.org/ns/sosa/ObservableProperty>
+                                                   ] ;
+                                   rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
