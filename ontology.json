@@ -3,7 +3,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+      "@id" : "http://w3id.org/digitalconstruction/Actor"
     }, {
       "@id" : "http://www.w3.org/ns/sosa/Sensor"
     } ]
@@ -102,7 +102,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/",
+  "@id" : "http://w3id.org/digitalconstruction/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
     "@language" : "en",
@@ -116,54 +116,54 @@
     "@value" : "The construction data monitoring ontology is defined as the module that includes the concepts and relationships that relevant with the data monitoring and gathering process in ther construction project. As designed , the monitoring can be achieved by collecting the relevant construction data of instant event to find the real-time status of a domain object. The module is also a socket to link with other ICT ontologies in order to obtain data from ICT devices."
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionMonitoring/0.9.1"
+    "@id" : "http://w3id.org/digitalconstruction/monitoring/0.9.2"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.9.1"
+    "@value" : "0.9.2"
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor",
+  "@id" : "http://w3id.org/digitalconstruction/Actor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject",
+  "@id" : "http://w3id.org/digitalconstruction/DomainObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Event",
+  "@id" : "http://w3id.org/digitalconstruction/Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "‘Event’ concept refers to a record of a single occurance based on a time instant."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity"
+    "@id" : "http://w3id.org/digitalconstruction/InformationEntity"
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity",
+  "@id" : "http://w3id.org/digitalconstruction/InformationEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+    "@id" : "http://w3id.org/digitalconstruction/DomainObject"
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationProducer",
+  "@id" : "http://w3id.org/digitalconstruction/InformationProducer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The producer of an Information entity. The information producer can be human who create or input the information to the system, or the sensors and other ICT devices that can generate the data and information and input in the system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+    "@id" : "http://w3id.org/digitalconstruction/Actor"
   }, {
     "@id" : "http://www.w3.org/ns/sosa/Sensor"
   } ],
@@ -171,62 +171,62 @@
     "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/StatusEvent",
+  "@id" : "http://w3id.org/digitalconstruction/StatusEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An event that indicates the status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Event"
+    "@id" : "http://w3id.org/digitalconstruction/Event"
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime",
+  "@id" : "http://w3id.org/digitalconstruction/hasCreationTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Realtion of an InformationEntity and its created time instant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity"
+    "@id" : "http://w3id.org/digitalconstruction/InformationEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2006/time#Instant"
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasObject",
+  "@id" : "http://w3id.org/digitalconstruction/hasObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A relation of between object-relevant concepts and their related domain object"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Event"
+    "@id" : "http://w3id.org/digitalconstruction/Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+    "@id" : "http://w3id.org/digitalconstruction/DomainObject"
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasOrigin",
+  "@id" : "http://w3id.org/digitalconstruction/hasOrigin",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Relation of a InformationEntity and its producer."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity"
+    "@id" : "http://w3id.org/digitalconstruction/InformationEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationProducer"
+    "@id" : "http://w3id.org/digitalconstruction/InformationProducer"
   } ]
 }, {
-  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue",
+  "@id" : "http://w3id.org/digitalconstruction/hasStatusValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A relation between the status evnet and its value."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/StatusEvent"
+    "@id" : "http://w3id.org/digitalconstruction/StatusEvent"
   } ]
 }, {
   "@id" : "http://www.w3.org/2006/time#Instant",
@@ -252,7 +252,7 @@
     "@value" : "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Event"
+    "@id" : "http://w3id.org/digitalconstruction/Event"
   }, {
     "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
   }, {

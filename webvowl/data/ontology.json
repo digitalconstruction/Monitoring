@@ -2,9 +2,9 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://bim.aalto.fi/DiCtion/Ontology", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "http://www.w3.org/2006/time" ],
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/",
-    "version" : "0.9.1",
+    "baseIris" : [ "http://w3id.org/digitalconstruction", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "http://www.w3.org/2006/time" ],
+    "iri" : "http://w3id.org/digitalconstruction/",
+    "version" : "0.9.2",
     "author" : [ "Yuan Zheng", "Seppo Torma" ],
     "comments" : {
       "en" : "The construction data monitoring ontology is defined as the module that includes the concepts and relationships that relevant with the data monitoring and gathering process in ther construction project. As designed , the monitoring can be achieved by collecting the relevant construction data of instant event to find the real-time status of a domain object. The module is also a socket to link with other ICT ontologies in order to obtain data from ICT devices."
@@ -13,18 +13,18 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Yuan Zheng",
+        "value" : "Seppo Torma",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Seppo Torma",
+        "value" : "Yuan Zheng",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "0.9.1",
+        "value" : "0.9.2",
         "type" : "label"
       } ]
     }
@@ -43,20 +43,14 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
-    "type" : "owl:Class"
-  }, {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
-    "id" : "15",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
-    "type" : "rdfs:Literal"
-  }, {
     "id" : "7",
     "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "2",
     "type" : "owl:Class"
@@ -64,13 +58,19 @@
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "8",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "27",
     "type" : "owl:Class"
   }, {
     "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -99,61 +99,37 @@
     "attributes" : [ "external" ],
     "id" : "1"
   }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/StatusEvent",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "StatusEvent"
-    },
-    "comment" : {
-      "undefined" : "An event that indicates the status"
-    },
-    "id" : "3",
-    "superClasses" : [ "4" ]
-  }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DomainObject"
-    },
-    "subClasses" : [ "7" ],
-    "comment" : {
-      "en" : "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."
-    },
-    "id" : "6"
-  }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Actor",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "iri" : "http://w3id.org/digitalconstruction/Actor",
+    "baseIri" : "http://w3id.org/digitalconstruction",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Actor"
     },
-    "subClasses" : [ "16" ],
+    "subClasses" : [ "8" ],
     "comment" : {
       "en" : "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."
     },
-    "id" : "15"
+    "id" : "7"
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "13",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "iri" : "http://w3id.org/digitalconstruction/InformationEntity",
+    "baseIri" : "http://w3id.org/digitalconstruction",
     "instances" : 0,
     "label" : {
       "IRI-based" : "InformationEntity"
     },
-    "subClasses" : [ "4" ],
+    "subClasses" : [ "17" ],
     "comment" : {
       "en" : "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."
     },
-    "id" : "7",
-    "superClasses" : [ "6" ]
+    "id" : "14",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Observation",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -166,7 +142,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "2",
-    "superClasses" : [ "1", "4" ]
+    "superClasses" : [ "1", "17" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sensor",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -174,26 +150,26 @@
     "label" : {
       "IRI-based" : "Sensor"
     },
-    "subClasses" : [ "16" ],
+    "subClasses" : [ "8" ],
     "comment" : {
       "en" : "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."
     },
     "attributes" : [ "external" ],
     "id" : "10"
   }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/InformationProducer",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "iri" : "http://w3id.org/digitalconstruction/InformationProducer",
+    "baseIri" : "http://w3id.org/digitalconstruction",
     "instances" : 0,
     "label" : {
       "IRI-based" : "InformationProducer"
     },
-    "intersection" : [ "10", "15" ],
+    "intersection" : [ "7", "10" ],
     "comment" : {
       "en" : "The producer of an Information entity. The information producer can be human who create or input the information to the system, or the sensors and other ICT devices that can generate the data and information and input in the system."
     },
     "attributes" : [ "intersection" ],
-    "id" : "16",
-    "superClasses" : [ "10", "15" ]
+    "id" : "8",
+    "superClasses" : [ "7", "10" ]
   }, {
     "iri" : "http://www.w3.org/2006/time#Instant",
     "baseIri" : "http://www.w3.org/2006/time",
@@ -207,24 +183,48 @@
     "attributes" : [ "external" ],
     "id" : "27"
   }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Event",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "iri" : "http://w3id.org/digitalconstruction/StatusEvent",
+    "baseIri" : "http://w3id.org/digitalconstruction",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StatusEvent"
+    },
+    "comment" : {
+      "undefined" : "An event that indicates the status"
+    },
+    "id" : "4",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://w3id.org/digitalconstruction/DomainObject",
+    "baseIri" : "http://w3id.org/digitalconstruction",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DomainObject"
+    },
+    "subClasses" : [ "14" ],
+    "comment" : {
+      "en" : "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."
+    },
+    "id" : "16"
+  }, {
+    "iri" : "http://w3id.org/digitalconstruction/Event",
+    "baseIri" : "http://w3id.org/digitalconstruction",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Event"
     },
-    "subClasses" : [ "3", "2" ],
+    "subClasses" : [ "2", "4" ],
     "comment" : {
       "en" : "‘Event’ concept refers to a record of a single occurance based on a time instant."
     },
-    "id" : "4",
-    "superClasses" : [ "7" ]
+    "id" : "17",
+    "superClasses" : [ "14" ]
   } ],
   "property" : [ {
-    "id" : "5",
-    "type" : "owl:objectProperty"
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "8",
+    "id" : "6",
     "type" : "owl:objectProperty"
   }, {
     "id" : "9",
@@ -234,12 +234,12 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "12",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "14",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "17",
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "18",
@@ -249,13 +249,13 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "20",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "21",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "22",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "23",
     "type" : "owl:allValuesFrom"
@@ -291,6 +291,19 @@
     "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
+    "iri" : "http://w3id.org/digitalconstruction/hasStatusValue",
+    "baseIri" : "http://w3id.org/digitalconstruction",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasStatusValue"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "A relation between the status evnet and its value."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "3"
+  }, {
     "iri" : "http://www.w3.org/ns/sosa/observedProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "1",
@@ -301,21 +314,8 @@
     "comment" : {
       "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "5"
-  }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasObject",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "hasObject"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "A relation of between object-relevant concepts and their related domain object"
-    },
-    "attributes" : [ "object" ],
-    "id" : "8"
+    "attributes" : [ "external", "object" ],
+    "id" : "6"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observes",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -327,7 +327,7 @@
     "comment" : {
       "en" : "Relation between a Sensor and an ObservableProperty that it is capable of sensing."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "9"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observedProperty",
@@ -340,35 +340,34 @@
     "comment" : {
       "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "11"
   }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
-    "range" : "13",
-    "label" : {
-      "IRI-based" : "hasStatusValue"
-    },
-    "domain" : "3",
-    "comment" : {
-      "en" : "A relation between the status evnet and its value."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "12"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
-    "inverse" : "9",
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "10",
+    "range" : "0",
     "label" : {
-      "IRI-based" : "isObservedBy"
+      "IRI-based" : "hasResult"
     },
     "domain" : "2",
     "comment" : {
-      "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
+      "undefined" : "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "14"
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://w3id.org/digitalconstruction/hasOrigin",
+    "baseIri" : "http://w3id.org/digitalconstruction",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasOrigin"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Relation of a InformationEntity and its producer."
+    },
+    "attributes" : [ "object" ],
+    "id" : "13"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observes",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -380,8 +379,8 @@
     "comment" : {
       "en" : "Relation between a Sensor and an ObservableProperty that it is capable of sensing."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "17"
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "15"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeObservation",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -393,35 +392,35 @@
     "comment" : {
       "en" : "Relation between a Sensor and an Observation made by the Sensor."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "18"
   }, {
     "range" : "1",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasOrigin",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
-    "range" : "16",
-    "label" : {
-      "IRI-based" : "hasOrigin"
-    },
-    "domain" : "7",
-    "comment" : {
-      "en" : "Relation of a InformationEntity and its producer."
-    },
-    "attributes" : [ "object" ],
+    "range" : "7",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "20"
   }, {
-    "range" : "6",
-    "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "14",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "21"
   }, {
-    "range" : "15",
-    "domain" : "16",
-    "attributes" : [ "object", "anonymous" ],
+    "iri" : "http://w3id.org/digitalconstruction/hasObject",
+    "baseIri" : "http://w3id.org/digitalconstruction",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasObject"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "A relation of between object-relevant concepts and their related domain object"
+    },
+    "attributes" : [ "object" ],
     "id" : "22"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
@@ -435,20 +434,21 @@
     "comment" : {
       "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "23"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
+    "inverse" : "9",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "0",
+    "range" : "10",
     "label" : {
-      "IRI-based" : "hasResult"
+      "IRI-based" : "isObservedBy"
     },
     "domain" : "2",
     "comment" : {
-      "undefined" : "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property."
+      "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "24"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
@@ -462,16 +462,16 @@
     "comment" : {
       "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "25"
   }, {
-    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime",
-    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "iri" : "http://w3id.org/digitalconstruction/hasCreationTime",
+    "baseIri" : "http://w3id.org/digitalconstruction",
     "range" : "27",
     "label" : {
       "IRI-based" : "hasCreationTime"
     },
-    "domain" : "7",
+    "domain" : "14",
     "comment" : {
       "en" : "Realtion of an InformationEntity and its created time instant"
     },
@@ -488,7 +488,7 @@
     "comment" : {
       "en" : "Relation between a Sensor and an Observation made by the Sensor."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "28"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
@@ -502,17 +502,17 @@
     "comment" : {
       "en" : "Relation between an Observation and the Sensor which made the Observations."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "29"
   }, {
-    "range" : "4",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "17",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "30"
   }, {
-    "range" : "7",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "10",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "31"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -525,17 +525,17 @@
     "comment" : {
       "undefined" : "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "32"
   }, {
-    "range" : "4",
-    "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "17",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "33"
   }, {
-    "range" : "10",
-    "domain" : "16",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "16",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "34"
   } ]
 }

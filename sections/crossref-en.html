@@ -1,33 +1,32 @@
-<html><h2 id="crossreference" class="list">Cross reference for Construction Data Gathering classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<html><h2 id="crossreference" class="list">Cross reference for Construction Monitoring classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Construction Monitoring.
 <div id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#Actor" title="http://bim.aalto.fi/DiCtion/Ontology/Actor">
+         <a href="#Actor" title="http://w3id.org/digitalconstruction/Actor">
             <span>actor</span>
          </a>
       </li>
       <li>
-         <a href="#DomainObject"
-            title="http://bim.aalto.fi/DiCtion/Ontology/DomainObject">
+         <a href="#DomainObject" title="http://w3id.org/digitalconstruction/DomainObject">
             <span>domain object</span>
          </a>
       </li>
       <li>
-         <a href="#Event" title="http://bim.aalto.fi/DiCtion/Ontology/Event">
+         <a href="#Event" title="http://w3id.org/digitalconstruction/Event">
             <span>event</span>
          </a>
       </li>
       <li>
          <a href="#InformationEntity"
-            title="http://bim.aalto.fi/DiCtion/Ontology/InformationEntity">
+            title="http://w3id.org/digitalconstruction/InformationEntity">
             <span>information entity</span>
          </a>
       </li>
       <li>
          <a href="#InformationProducer"
-            title="http://bim.aalto.fi/DiCtion/Ontology/InformationProducer">
+            title="http://w3id.org/digitalconstruction/InformationProducer">
             <span>information producer</span>
          </a>
       </li>
@@ -57,7 +56,7 @@ This section provides details for each class and property defined by Constructio
          </a>
       </li>
       <li>
-         <a href="#StatusEvent" title="http://bim.aalto.fi/DiCtion/Ontology/StatusEvent">
+         <a href="#StatusEvent" title="http://w3id.org/digitalconstruction/StatusEvent">
             <span>status event</span>
          </a>
       </li>
@@ -68,7 +67,7 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/Actor</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Actor</p>
       <div class="comment">
          <span class="markdown">Actor is a subclass of Resource, which refers to all the agents that are responsible of activities.</span>
       </div>
@@ -76,7 +75,7 @@ This section provides details for each class and property defined by Constructio
          <dt>has sub-classes</dt>
          <dd>
             <a href="#InformationProducer"
-               title="http://bim.aalto.fi/DiCtion/Ontology/InformationProducer">information producer</a>
+               title="http://w3id.org/digitalconstruction/InformationProducer">information producer</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -87,7 +86,7 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/DomainObject</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/DomainObject</p>
       <div class="comment">
          <span class="markdown">Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc.</span>
       </div>
@@ -95,12 +94,12 @@ This section provides details for each class and property defined by Constructio
          <dt>has sub-classes</dt>
          <dd>
             <a href="#InformationEntity"
-               title="http://bim.aalto.fi/DiCtion/Ontology/InformationEntity">information entity</a>
+               title="http://w3id.org/digitalconstruction/InformationEntity">information entity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasObject" title="http://bim.aalto.fi/DiCtion/Ontology/hasObject">has object</a>
+            <a href="#hasObject" title="http://w3id.org/digitalconstruction/hasObject">has object</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -111,7 +110,7 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/Event</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Event</p>
       <div class="comment">
          <span class="markdown">‘Event’ concept refers to a record of a single occurance based on a time instant.</span>
       </div>
@@ -119,18 +118,18 @@ This section provides details for each class and property defined by Constructio
          <dt>has super-classes</dt>
          <dd>
             <a href="#InformationEntity"
-               title="http://bim.aalto.fi/DiCtion/Ontology/InformationEntity">information entity</a>
+               title="http://w3id.org/digitalconstruction/InformationEntity">information entity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">observation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#StatusEvent" title="http://bim.aalto.fi/DiCtion/Ontology/StatusEvent">status event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StatusEvent" title="http://w3id.org/digitalconstruction/StatusEvent">status event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasObject" title="http://bim.aalto.fi/DiCtion/Ontology/hasObject">has object</a>
+            <a href="#hasObject" title="http://w3id.org/digitalconstruction/hasObject">has object</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -141,27 +140,26 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/InformationEntity</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/InformationEntity</p>
       <div class="comment">
          <span class="markdown">An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DomainObject"
-               title="http://bim.aalto.fi/DiCtion/Ontology/DomainObject">domain object</a>
+            <a href="#DomainObject" title="http://w3id.org/digitalconstruction/DomainObject">domain object</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Event" title="http://bim.aalto.fi/DiCtion/Ontology/Event">event</a>
+            <a href="#Event" title="http://w3id.org/digitalconstruction/Event">event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasCreationTime"
-               title="http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime">has creation time</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasOrigin" title="http://bim.aalto.fi/DiCtion/Ontology/hasOrigin">has origin</a>
+               title="http://w3id.org/digitalconstruction/hasCreationTime">has creation time</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOrigin" title="http://w3id.org/digitalconstruction/hasOrigin">has origin</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -172,14 +170,14 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/InformationProducer</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/InformationProducer</p>
       <div class="comment">
          <span class="markdown">The producer of an Information entity. The information producer can be human who create or input the information to the system, or the sensors and other ICT devices that can generate the data and information and input in the system.</span>
       </div>
       <dl class="description">
          <dt>is equivalent to</dt>
          <dd>
-            <a href="#Actor" title="http://bim.aalto.fi/DiCtion/Ontology/Actor">actor</a>
+            <a href="#Actor" title="http://w3id.org/digitalconstruction/Actor">actor</a>
             <sup class="type-c" title="class">c</sup> 
             <span class="logic">and</span> 
             <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">sensor</a>
@@ -187,7 +185,7 @@ This section provides details for each class and property defined by Constructio
          </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Actor" title="http://bim.aalto.fi/DiCtion/Ontology/Actor">actor</a>
+            <a href="#Actor" title="http://w3id.org/digitalconstruction/Actor">actor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -196,7 +194,7 @@ This section provides details for each class and property defined by Constructio
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasOrigin" title="http://bim.aalto.fi/DiCtion/Ontology/hasOrigin">has origin</a>
+            <a href="#hasOrigin" title="http://w3id.org/digitalconstruction/hasOrigin">has origin</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -215,7 +213,7 @@ This section provides details for each class and property defined by Constructio
          <dt>is in range of</dt>
          <dd>
             <a href="#hasCreationTime"
-               title="http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime">has creation time</a>
+               title="http://w3id.org/digitalconstruction/hasCreationTime">has creation time</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -270,7 +268,7 @@ This section provides details for each class and property defined by Constructio
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Event" title="http://bim.aalto.fi/DiCtion/Ontology/Event">event</a>
+            <a href="#Event" title="http://w3id.org/digitalconstruction/Event">event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -377,7 +375,7 @@ This section provides details for each class and property defined by Constructio
          <dt>has sub-classes</dt>
          <dd>
             <a href="#InformationProducer"
-               title="http://bim.aalto.fi/DiCtion/Ontology/InformationProducer">information producer</a>
+               title="http://w3id.org/digitalconstruction/InformationProducer">information producer</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -400,20 +398,20 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/StatusEvent</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/StatusEvent</p>
       <div class="comment">
          <span class="markdown">An event that indicates the status</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Event" title="http://bim.aalto.fi/DiCtion/Ontology/Event">event</a>
+            <a href="#Event" title="http://w3id.org/digitalconstruction/Event">event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasStatusValue"
-               title="http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue">has status value</a>
+               title="http://w3id.org/digitalconstruction/hasStatusValue">has status value</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
@@ -423,17 +421,17 @@ This section provides details for each class and property defined by Constructio
    <ul class="hlist">
       <li>
          <a href="#hasCreationTime"
-            title="http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime">
+            title="http://w3id.org/digitalconstruction/hasCreationTime">
             <span>has creation time</span>
          </a>
       </li>
       <li>
-         <a href="#hasObject" title="http://bim.aalto.fi/DiCtion/Ontology/hasObject">
+         <a href="#hasObject" title="http://w3id.org/digitalconstruction/hasObject">
             <span>has object</span>
          </a>
       </li>
       <li>
-         <a href="#hasOrigin" title="http://bim.aalto.fi/DiCtion/Ontology/hasOrigin">
+         <a href="#hasOrigin" title="http://w3id.org/digitalconstruction/hasOrigin">
             <span>has origin</span>
          </a>
       </li>
@@ -474,7 +472,7 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/hasCreationTime</p>
       <div class="comment">
          <span class="markdown">Realtion of an InformationEntity and its created time instant</span>
       </div>
@@ -483,7 +481,7 @@ This section provides details for each class and property defined by Constructio
             <dt>has domain</dt>
             <dd>
                <a href="#InformationEntity"
-                  title="http://bim.aalto.fi/DiCtion/Ontology/InformationEntity">information entity</a>
+                  title="http://w3id.org/digitalconstruction/InformationEntity">information entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -500,7 +498,7 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/hasObject</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/hasObject</p>
       <div class="comment">
          <span class="markdown">A relation of between object-relevant concepts and their related domain object</span>
       </div>
@@ -508,13 +506,12 @@ This section provides details for each class and property defined by Constructio
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Event" title="http://bim.aalto.fi/DiCtion/Ontology/Event">event</a>
+               <a href="#Event" title="http://w3id.org/digitalconstruction/Event">event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#DomainObject"
-                  title="http://bim.aalto.fi/DiCtion/Ontology/DomainObject">domain object</a>
+               <a href="#DomainObject" title="http://w3id.org/digitalconstruction/DomainObject">domain object</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -526,7 +523,7 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/hasOrigin</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/hasOrigin</p>
       <div class="comment">
          <span class="markdown">Relation of a InformationEntity and its producer.</span>
       </div>
@@ -535,13 +532,13 @@ This section provides details for each class and property defined by Constructio
             <dt>has domain</dt>
             <dd>
                <a href="#InformationEntity"
-                  title="http://bim.aalto.fi/DiCtion/Ontology/InformationEntity">information entity</a>
+                  title="http://w3id.org/digitalconstruction/InformationEntity">information entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#InformationProducer"
-                  title="http://bim.aalto.fi/DiCtion/Ontology/InformationProducer">information producer</a>
+                  title="http://w3id.org/digitalconstruction/InformationProducer">information producer</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -722,7 +719,7 @@ This section provides details for each class and property defined by Constructio
    <ul class="hlist">
       <li>
          <a href="#hasStatusValue"
-            title="http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue">
+            title="http://w3id.org/digitalconstruction/hasStatusValue">
             <span>has status value</span>
          </a>
       </li>
@@ -733,7 +730,7 @@ This section provides details for each class and property defined by Constructio
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/hasStatusValue</p>
       <div class="comment">
          <span class="markdown">A relation between the status evnet and its value.</span>
       </div>
@@ -741,7 +738,7 @@ This section provides details for each class and property defined by Constructio
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#StatusEvent" title="http://bim.aalto.fi/DiCtion/Ontology/StatusEvent">status event</a>
+               <a href="#StatusEvent" title="http://w3id.org/digitalconstruction/StatusEvent">status event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

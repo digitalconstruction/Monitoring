@@ -1,9 +1,9 @@
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/2002/07/owl#versionIRI> <http://bim.aalto.fi/DiCtion/Ontology/ConstructionMonitoring/0.9.1> .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://purl.org/dc/terms/creator> "Seppo Torma"@en .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://purl.org/dc/terms/creator> "Yuan Zheng"@en .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "The construction data monitoring ontology is defined as the module that includes the concepts and relationships that relevant with the data monitoring and gathering process in ther construction project. As designed , the monitoring can be achieved by collecting the relevant construction data of instant event to find the real-time status of a domain object. The module is also a socket to link with other ICT ontologies in order to obtain data from ICT devices."@en .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/2002/07/owl#versionInfo> "0.9.1" .
+<http://w3id.org/digitalconstruction/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/digitalconstruction/> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/digitalconstruction/monitoring/0.9.2> .
+<http://w3id.org/digitalconstruction/> <http://purl.org/dc/terms/creator> "Seppo Torma"@en .
+<http://w3id.org/digitalconstruction/> <http://purl.org/dc/terms/creator> "Yuan Zheng"@en .
+<http://w3id.org/digitalconstruction/> <http://www.w3.org/2000/01/rdf-schema#comment> "The construction data monitoring ontology is defined as the module that includes the concepts and relationships that relevant with the data monitoring and gathering process in ther construction project. As designed , the monitoring can be achieved by collecting the relevant construction data of instant event to find the real-time status of a domain object. The module is also a socket to link with other ICT ontologies in order to obtain data from ICT devices."@en .
+<http://w3id.org/digitalconstruction/> <http://www.w3.org/2002/07/owl#versionInfo> "0.9.2" .
 # 
 # 
 # #################################################################
@@ -13,23 +13,23 @@
 # #################################################################
 # 
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime
-<http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasCreationTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Realtion of an InformationEntity and its created time instant"@en .
+# http://w3id.org/digitalconstruction/hasCreationTime
+<http://w3id.org/digitalconstruction/hasCreationTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/hasCreationTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/InformationEntity> .
+<http://w3id.org/digitalconstruction/hasCreationTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
+<http://w3id.org/digitalconstruction/hasCreationTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Realtion of an InformationEntity and its created time instant"@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasObject
-<http://bim.aalto.fi/DiCtion/Ontology/hasObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasObject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Event> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation of between object-relevant concepts and their related domain object"@en .
+# http://w3id.org/digitalconstruction/hasObject
+<http://w3id.org/digitalconstruction/hasObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/hasObject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Event> .
+<http://w3id.org/digitalconstruction/hasObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/hasObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation of between object-relevant concepts and their related domain object"@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasOrigin
-<http://bim.aalto.fi/DiCtion/Ontology/hasOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/InformationProducer> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation of a InformationEntity and its producer."@en .
+# http://w3id.org/digitalconstruction/hasOrigin
+<http://w3id.org/digitalconstruction/hasOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/hasOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/InformationEntity> .
+<http://w3id.org/digitalconstruction/hasOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/InformationProducer> .
+<http://w3id.org/digitalconstruction/hasOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation of a InformationEntity and its producer."@en .
 # 
 # http://www.w3.org/ns/sosa/hasResult
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -78,10 +78,10 @@
 # #################################################################
 # 
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue
-<http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/StatusEvent> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasStatusValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between the status evnet and its value."@en .
+# http://w3id.org/digitalconstruction/hasStatusValue
+<http://w3id.org/digitalconstruction/hasStatusValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/digitalconstruction/hasStatusValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/StatusEvent> .
+<http://w3id.org/digitalconstruction/hasStatusValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between the status evnet and its value."@en .
 # 
 # 
 # 
@@ -92,43 +92,43 @@
 # #################################################################
 # 
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Actor
-<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2000/01/rdf-schema#comment> "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."@en .
+# http://w3id.org/digitalconstruction/Actor
+<http://w3id.org/digitalconstruction/Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Actor> <http://www.w3.org/2000/01/rdf-schema#comment> "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/DomainObject
-<http://bim.aalto.fi/DiCtion/Ontology/DomainObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/DomainObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."@en .
+# http://w3id.org/digitalconstruction/DomainObject
+<http://w3id.org/digitalconstruction/DomainObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/DomainObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Event
-<http://bim.aalto.fi/DiCtion/Ontology/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "‘Event’ concept refers to a record of a single occurance based on a time instant."@en .
+# http://w3id.org/digitalconstruction/Event
+<http://w3id.org/digitalconstruction/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/InformationEntity> .
+<http://w3id.org/digitalconstruction/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "‘Event’ concept refers to a record of a single occurance based on a time instant."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/InformationEntity
-<http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."@en .
+# http://w3id.org/digitalconstruction/InformationEntity
+<http://w3id.org/digitalconstruction/InformationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/InformationEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/InformationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/InformationProducer
-<http://bim.aalto.fi/DiCtion/Ontology/InformationProducer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/InformationProducer> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+# http://w3id.org/digitalconstruction/InformationProducer
+<http://w3id.org/digitalconstruction/InformationProducer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/InformationProducer> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
 _:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/digitalconstruction/Actor> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sensor> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/InformationProducer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
-<http://bim.aalto.fi/DiCtion/Ontology/InformationProducer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> .
-<http://bim.aalto.fi/DiCtion/Ontology/InformationProducer> <http://www.w3.org/2000/01/rdf-schema#comment> "The producer of an Information entity. The information producer can be human who create or input the information to the system, or the sensors and other ICT devices that can generate the data and information and input in the system."@en .
+<http://w3id.org/digitalconstruction/InformationProducer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/Actor> .
+<http://w3id.org/digitalconstruction/InformationProducer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> .
+<http://w3id.org/digitalconstruction/InformationProducer> <http://www.w3.org/2000/01/rdf-schema#comment> "The producer of an Information entity. The information producer can be human who create or input the information to the system, or the sensors and other ICT devices that can generate the data and information and input in the system."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/StatusEvent
-<http://bim.aalto.fi/DiCtion/Ontology/StatusEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/StatusEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Event> .
-<http://bim.aalto.fi/DiCtion/Ontology/StatusEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event that indicates the status" .
+# http://w3id.org/digitalconstruction/StatusEvent
+<http://w3id.org/digitalconstruction/StatusEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/StatusEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/Event> .
+<http://w3id.org/digitalconstruction/StatusEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event that indicates the status" .
 # 
 # http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -144,7 +144,7 @@ _:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sos
 # 
 # http://www.w3.org/ns/sosa/Observation
 <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Event> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/Event> .
 <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
